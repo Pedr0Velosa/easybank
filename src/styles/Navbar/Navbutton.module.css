@@ -1,0 +1,39 @@
+@value colors: "../colors.css";
+@value neutral-grayish-blue from colors;
+
+.button-container {
+  --durationTime: 200ms;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: neutral-grayish-blue;
+}
+
+.button[data-open="false"] .line {
+  transition: y var(--durationTime) ease-in var(--durationTime), rotate var(--durationTime) ease-in,
+    opacity 0ms var(--durationTime);
+  transform-origin: center;
+}
+.button[data-open="true"] .line {
+  transition: y var(--durationTime) ease-in, rotate var(--durationTime) ease-in var(--durationTime),
+    opacity 0ms var(--durationTime);
+  transform-origin: center;
+}
+
+.button[data-open="true"] :is(.top, .bottom) {
+  y: 45;
+}
+.button[data-open="true"] .top {
+  rotate: 45deg;
+}
+.button[data-open="true"] .bottom {
+  rotate: -45deg;
+}
+.button[data-open="true"] .middle {
+  opacity: 0;
+}
+
+@media (min-width: 800px) {
+  .button-container {
+    display: none;
+  }
+}

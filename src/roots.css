@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  font-size: 1.1rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+button:focus {
+  outline: 2px solid black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#root {
+  --padding: 1rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}

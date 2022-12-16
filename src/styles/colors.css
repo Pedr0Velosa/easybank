@@ -1,0 +1,8 @@
+@value primary-blue:hsl(233, 26%, 24%);
+@value primary-green:hsl(136, 65%, 51%);
+@value primary-cyan:hsl(192, 70%, 51%);
+
+@value neutral-grayish-blue:hsl(233, 8%, 62%);
+@value neutral-ligth-grayish-blue:hsl(220, 16%, 96%);
+@value neutral-ligth-gray:hsl(0, 0%, 98%);
+@value neutral-white:hsl(0, 0%, 100%);
