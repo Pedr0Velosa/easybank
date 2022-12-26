@@ -4,6 +4,10 @@
 @value fs-bold from fs;
 
 .invite {
+  padding: 1rem 2rem;
+}
+
+.responsive {
   display: none;
 }
 
@@ -84,12 +88,7 @@
     margin: 0;
   }
 
-  .invite {
+  .responsive {
     display: block;
-    padding: 1rem 2rem;
-    background: linear-gradient(90deg, primary-green 0%, primary-cyan 90%);
-    border-radius: 2rem;
-    color: neutral-white;
-    font-weight: fs-bold;
   }
 }

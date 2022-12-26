@@ -1,3 +1,8 @@
+:root {
+  --neutral-ligth-gray: hsl(0, 0%, 98%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
 *,
 *::before,
 *::after {
@@ -19,6 +24,8 @@ body {
 
 button {
   border: none;
+  color: inherit;
+  font-weight: inherit;
   background-color: transparent;
   cursor: pointer;
 }
@@ -37,4 +44,21 @@ ul {
 img {
   width: 100%;
   max-width: 100%;
+}
+
+div[data="background"]:empty {
+  display: none;
+}
+
+#root > section:first-of-type {
+  padding-top: 0;
+}
+#root > section {
+  padding-top: 4rem;
+}
+#root > section:nth-child(even) {
+  background-color: var(--neutral-white);
+}
+#root > section:nth-child(odd) {
+  background-color: var(--neutral-ligth-gray);
 }

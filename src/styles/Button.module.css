@@ -1,0 +1,12 @@
+@value colors: "./colors.css";
+@value primary-green,primary-cyan,neutral-white from colors;
+@value fs: "./fontWeigth.css";
+@value fs-bold from fs;
+
+.custom-button {
+  background: linear-gradient(90deg, primary-green 0%, primary-cyan 90%);
+  border-radius: 9999px;
+  color: neutral-white;
+  font-weight: fs-bold;
+  width: max-content;
+}

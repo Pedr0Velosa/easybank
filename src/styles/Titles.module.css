@@ -1,0 +1,31 @@
+@value fs: "./fontWeigth.css";
+@value fs-normal from fs;
+@value colors: "./colors.css";
+@value neutral-grayish-blue from colors;
+
+.text-container {
+  padding: calc(var(--padding) * 2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: fs-normal;
+  margin-bottom: 1rem;
+}
+.sub-title {
+  color: neutral-grayish-blue;
+  line-height: 1.8;
+}
+.image {
+  width: 6rem;
+  aspect-ratio: 1/1;
+}
+.text-container:not(:has(.image)) .sub-title {
+  margin-bottom: 2rem;
+}
+.text-container:has(.image) .title {
+  margin-top: 2rem;
+}

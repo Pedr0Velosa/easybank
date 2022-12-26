@@ -2,6 +2,7 @@ import styles from "@styles/Navbar/MenuItems.module.css";
 import type { OpenProps } from "../Navbar";
 import MobileMenu from "./MobileMenu";
 import React from "react";
+import Button from "./Button";
 const MENU_ITEMS = ["home", "about", "contact", "blog", "careers"];
 
 const Menu = ({ isOpen, setIsOpen }: OpenProps) => {
@@ -53,7 +54,9 @@ const Menu = ({ isOpen, setIsOpen }: OpenProps) => {
           ))}
         </ul>
       </div>
-      <button className={styles.invite}>Request invite</button>
+      <Button>
+        <button className={`${styles.invite} ${styles.responsive}`}>Request Invite</button>
+      </Button>
     </>
   );
 };

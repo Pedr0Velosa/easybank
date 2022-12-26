@@ -1,33 +1,15 @@
-@value fs: "../fontWeigth.css";
-@value fs-normal from fs;
-@value colors: "../colors.css";
-@value neutral-grayish-blue from colors;
-
-.container {
-  padding: var(--padding);
+.image-container {
   position: relative;
 }
-
 .background-image {
   position: absolute;
-  inset: 0;
-  top: -5rem;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
+  top: 0;
   z-index: -1;
-}
-
-.image {
-  margin-top: -12rem;
-}
-.text-container {
-  text-align: center;
-  padding: calc(var(--padding) * 2);
-}
-.title {
-  font-size: 2.25rem;
-  font-weight: fs-normal;
-  margin-bottom: 1rem;
-}
-.sub-title {
-  color: neutral-grayish-blue;
-  line-height: 1.8;
+  background-image: url("../../assets/svg/bg-intro-mobile.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
