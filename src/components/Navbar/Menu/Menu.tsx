@@ -54,9 +54,11 @@ const Menu = ({ isOpen, setIsOpen }: OpenProps) => {
           ))}
         </ul>
       </div>
-      <Button>
-        <button className={`${styles.invite} ${styles.responsive}`}>Request Invite</button>
-      </Button>
+      <div className={styles["invite-container"]}>
+        <Button>
+          <button className={`${styles.invite} ${styles.responsive}`}>Request Invite</button>
+        </Button>
+      </div>
     </>
   );
 };

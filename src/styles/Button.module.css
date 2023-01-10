@@ -1,6 +1,6 @@
-@value colors: "./colors.css";
+@value colors: "./utils/colors.css";
 @value primary-green,primary-cyan,neutral-white from colors;
-@value fs: "./fontWeigth.css";
+@value fs: "./utils/fontWeigth.css";
 @value fs-bold from fs;
 
 .custom-button {
@@ -9,4 +9,16 @@
   color: neutral-white;
   font-weight: fs-bold;
   width: max-content;
+  display: grid;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.custom-button:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0.2;
+  cursor: pointer;
 }

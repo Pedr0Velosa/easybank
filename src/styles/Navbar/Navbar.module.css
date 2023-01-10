@@ -1,0 +1,27 @@
+@value colors: "../utils/colors.css";
+@value neutral-white from colors;
+
+.header {
+  z-index: 20;
+  position: sticky;
+  top: 0;
+  background-color: neutral-white;
+}
+
+.container {
+  --padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--padding);
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+@media (width > 800px) {
+  .container {
+    align-items: stretch;
+    padding-block: 0;
+  }
+}

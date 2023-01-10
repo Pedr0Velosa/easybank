@@ -1,24 +1,39 @@
-@value fs: "./fontWeigth.css";
+@value fs: "./utils/fontWeigth.css";
 @value fs-normal from fs;
-@value colors: "./colors.css";
+@value colors: "./utils/colors.css";
 @value neutral-grayish-blue from colors;
 
+.container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+
 .text-container {
-  padding: calc(var(--padding) * 2);
   text-align: center;
   display: flex;
   flex-direction: column;
   place-items: center;
+  max-width: 50rem;
+}
+.text-container:not(:last-of-type) {
+  margin-bottom: 3rem;
 }
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 0.5rem + 3vw, 3.5rem);
   font-weight: fs-normal;
   margin-bottom: 1rem;
+}
+.title:is(h2) {
+  font-size: clamp(1.5rem, 0.5rem + 3vw, 2rem);
 }
 .sub-title {
   color: neutral-grayish-blue;
   line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
+
 .image {
   width: 6rem;
   aspect-ratio: 1/1;
@@ -28,4 +43,21 @@
 }
 .text-container:has(.image) .title {
   margin-top: 2rem;
+}
+
+/* 900px ficou melhor */
+@media (width > 900px) {
+  .container {
+    flex-direction: row;
+  }
+  .text-container {
+    text-align: left;
+    display: block;
+  }
+  .sub-title {
+    line-height: 1.4;
+  }
+  .text-container:has(.image) .title {
+    margin-block: 3rem;
+  }
 }

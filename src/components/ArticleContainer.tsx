@@ -10,11 +10,13 @@ type ArticleType = {
 
 const ArticleContainer = ({ author, title, description, image }: ArticleType) => {
   return (
-    <article>
-      <img src={image} alt="" className={styles.image} />
-      <p className={styles.author}>{author}</p>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.author}>{description}</p>
+    <article className={styles.container}>
+      <img src={image} alt="" className={styles["image"]} />
+      <div className={styles["text-container"]}>
+        <p className={styles.author}>{author}</p>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
+      </div>
     </article>
   );
 };

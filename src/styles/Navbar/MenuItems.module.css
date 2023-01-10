@@ -1,6 +1,6 @@
-@value colors: "../colors.css";
+@value colors: "../utils/colors.css";
 @value neutral-white,primary-blue,primary-green,primary-cyan,neutral-grayish-blue from colors;
-@value fs: "../fontWeigth.css";
+@value fs: "../utils/fontWeigth.css";
 @value fs-bold from fs;
 
 .invite {
@@ -62,9 +62,17 @@
 }
 /********/
 
-@media (min-width: 800px) {
+@media (width > 800px) {
+  .invite-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .only-desktop {
     display: block;
+    display: flex;
+    align-items: center;
   }
   .list {
     inset: unset;
@@ -75,15 +83,33 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: calc(2vh + 5px);
   }
 
   .list-item {
     padding-inline: 0;
-    padding-block: 0;
+    padding-block: calc(2 * var(--padding));
     margin: 0;
     color: neutral-grayish-blue;
+    position: relative;
   }
+  .list-item::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border-radius: 9999px;
+  }
+  .list-item:hover {
+    color: black;
+  }
+  .list-item:hover::before {
+    background: linear-gradient(90deg, primary-green 0%, primary-cyan 90%);
+  }
+
   .list-item:not(:last-child) {
     margin: 0;
   }

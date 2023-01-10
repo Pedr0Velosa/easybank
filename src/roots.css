@@ -1,6 +1,9 @@
 :root {
   --neutral-ligth-gray: hsl(0, 0%, 98%);
   --neutral-white: hsl(0, 0%, 100%);
+  --neutral-ligth-grayish-blue: hsl(220, 16%, 96%);
+  --paddingInline: 2rem;
+  --paddingBlock: 6rem;
 }
 
 *,
@@ -14,7 +17,7 @@
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100%;
   font-family: "Public Sans", sans-serif;
 }
 
@@ -32,13 +35,12 @@ button {
 button:focus {
   outline: 2px solid black;
 }
-
+img {
+  max-width: 100%;
+  display: block;
+}
 ul {
   list-style-type: none;
-}
-
-#root {
-  --padding: 1rem;
 }
 
 img {
@@ -50,15 +52,30 @@ div[data="background"]:empty {
   display: none;
 }
 
+/* 
 #root > section:first-of-type {
   padding-top: 0;
+} */
+#root > * {
+  padding-inline: var(--paddingInline);
 }
-#root > section {
+#root > *:not(header) {
   padding-top: 4rem;
+  padding-block: var(--paddingBlock);
 }
-#root > section:nth-child(even) {
-  background-color: var(--neutral-white);
+
+#root > *:not(header, footer):nth-child(even) {
+  background-color: var(--neutral-ligth-grayish-blue);
 }
-#root > section:nth-child(odd) {
+#root > *:not(header, footer):nth-child(odd) {
   background-color: var(--neutral-ligth-gray);
+}
+
+@media (width > 800px) {
+  #root {
+    --paddingInline: 4rem;
+  }
+  button:focus {
+    outline: none;
+  }
 }

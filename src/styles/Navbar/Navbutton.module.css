@@ -1,4 +1,4 @@
-@value colors: "../colors.css";
+@value colors: "../utils/colors.css";
 @value neutral-grayish-blue from colors;
 
 .button-container {
@@ -30,10 +30,4 @@
 }
 .button[data-open="true"] .middle {
   opacity: 0;
-}
-
-@media (min-width: 800px) {
-  .button-container {
-    display: none;
-  }
 }
